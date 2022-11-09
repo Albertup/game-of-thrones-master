@@ -1,0 +1,117 @@
+.c-timeline--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(18, 19, 22, 1);
+}
+
+.simplebar-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.simplebar-scrollbar::before {
+  background: rgba(255, 255, 255, 0.8);
+    height: 100px;
+    width: 4px;
+  }
+  .c-timeline--holder {
+    width: 90vw;
+    height: 80vh;
+  }
+  .c-timeline--btn{
+    position: fixed;
+  }
+  .c-timeline--btn button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 38px;
+    margin-top: 20px;
+    background-color: rgba(18, 19, 22, 1);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .c-timeline--btn button:hover{
+    background-color: rgba(18, 19, 22, 1);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .c-timeline--cardholder{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    
+  }
+
+  .c-timeline--cardholder__odd {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-left:  2px solid rgba(255, 255, 255, 0.8);
+  }
+  .c-timeline--cardholder__couple {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right:  2px solid rgba(255, 255, 255, 0.8);
+  }
+  .c-timeline--card__odd {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top:  4px solid rgba(255, 255, 255, 0.8);
+    border-left: 20px;
+    border-top-right-radius: 20px;
+  }
+  .c-timeline--card__couple  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top:  4px solid rgba(255, 255, 255, 0.8);
+    border-top-left-radius: 20px;
+  }
+
+  .c-timeline--card  {
+    position: inherit;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .c-timeline--card__odd img {
+    max-height: 270px;
+    max-width: 210px;
+    border-radius: 50%;
+  }
+  .c-timeline--card__couple img {
+    max-height: 270px;
+    max-width: 210px;
+    border-radius: 50%;
+  }
+  .c-timeline--card h3 {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 14px;
+    text-decoration:none;
+  }
+  
