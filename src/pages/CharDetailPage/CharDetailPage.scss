@@ -1,0 +1,98 @@
+.b-background{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+  }
+.b-CharDetail{
+    width: 100vw;
+    height: 70vh;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.b-CharDetail__img{
+    width: 248px;
+    height: 320px;
+    object-fit: contain;
+    padding: 5px;
+  }
+  
+.b-CharDetail__name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 642px;
+    height: 36px;
+    
+    font-family: Thrones;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color:white;
+  }
+.b-gallery-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:flex-start;
+    color: white;
+    font-family:Thrones;
+    ul{
+        list-style: none;
+    }
+
+}
+.b-gallery-info__box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 248px;
+    height: 300px;
+    li{
+        font-family: 'lato-regular';
+        font-size: 16px;
+        color: white;
+        line-height: 40px;
+    }
+    p{
+        font-family: 'lato-regular';
+        font-size: 16px;
+        color: white;
+        line-height: 40px;
+    }
+}
+.b-gallery-info__box__House{
+    width: 248px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.b-gallery-info__box__imgHouse{
+    width: 200px;
+    height: 300px;
+}
+
+  
+.simplebar-content--2{ 
+    width: 248px;
+    height: 231px;
+} 
+.simplebar-scrollbar--2::before { 
+    color: white;
+    background: rgb(2,0,36); 
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(32,32,34,1) 53%, rgba(40,45,46,1) 100%); 
+    height: 20px; 
+    width: 2px;
+}
+

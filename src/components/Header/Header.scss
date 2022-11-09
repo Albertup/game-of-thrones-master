@@ -1,0 +1,60 @@
+.b-header{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.b-header__buscador{
+    margin-left: 40px;
+    height: 5vh;
+    width: 40vw;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+}
+.b-header__buscador__div{
+    width: 5vw;
+    height: 5vh;
+}
+.b-header__buscador__div__img{
+    width: 5vw;
+    height: 5vh;
+    object-fit: contain;
+}
+input{
+    margin-left: 20px;
+    width: 20vw;
+    font-family: Thrones;
+    font-weight: bolder;
+    font-size: 16px;
+    color:white;
+    background: inherit;
+    background-color: transparent;
+    border: 0px;
+}
+.b-nav{
+    margin-right: 20px;
+    height: 5vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+.b-nav__div{
+    height: 5vh;
+    width: 5vw;  
+}
+.b-nav__home{
+    object-fit: cover;
+}
+.b-nav__español{
+    object-fit: cover;
+}
+.b-nav__ingles{
+    object-fit: cover;
+}

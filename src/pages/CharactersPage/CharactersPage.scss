@@ -1,0 +1,153 @@
+.b-background{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+}
+.b-header{
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+}
+.b-buscador{
+  height: 10vh;
+  width: 40vw;
+  border-bottom: 2px solid white;
+  img{
+      height: 5vh;
+      width: auto;
+  }
+  input{
+      color:white;
+      background-color: transparent;
+  }
+}
+
+.b-personajes {
+    width: 100vw;
+    height: 70vh;
+    // height: auto;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }  
+  
+  .simplebar-content { 
+    width: 85vw;
+    height: 70vh;
+    overflow: hidden scroll;
+    // display: flex; 
+    // flex-direction: row; 
+    // flex-wrap: wrap; 
+    // justify-content: center; 
+} 
+
+//   .simplebar-scrollbar::before { 
+//     background: rgb(255,255,255); 
+//     // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(32,32,34,1) 53%, rgba(40,45,46,1) 100%); 
+// }
+.simplebar-placeholder{
+    width: 85vw;
+    height: 70vh;
+}
+.simplebar-track.simplebar-vertical{
+  visibility: visible;
+  width: 5px;
+  height: 60vh;
+  background-image: white;
+  .simplebar-scrollbar{
+    background-color: orange;
+    width: 5px;
+    height: 15px;
+  }
+
+}
+.b-gallery{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+  // position: relative;
+  // top: 25px;
+  // padding-bottom: 7%;
+  // padding-top: 20px;
+  // &::-webkit-scrollbar{
+  //   width: 2PX;
+  // }
+  // &::-webkit-scrollbar-track{
+  //   background: #443d3d;
+  // }
+  // &::-webkit-scrollbar-thumb{
+  //   background-color: white;
+  //   border-radius: 10px;
+  //   border:2px solid orange;
+  // }
+}
+.b-gallery__box{
+    margin: 12px;
+    width: 248px;
+    height: 320px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+  .b-img{
+    display: block;
+    width: 248px;
+    height: 320px;
+    object-fit:cover;
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 248px;
+      height: 56px;
+      h4{
+        width: 248px;
+        text-align: center;
+        font-family: 'Thrones';
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        background-color: #4c4c4c86;
+        transition: 1.5s ease;
+      }
+    }
+  }
+  .b-img__name{
+    width: 248px;
+    text-align: center;
+    font-family: 'Thrones';
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    background-color: #4c4c4c86;
+    transition: 1.5s ease;
+    // display: none;
+  }  
+  .b-div-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 248px;
+    height: 56px;
+  }
+//   .b-img__name:hover{
+//     font-family: 'Thrones';
+//     color: white;
+//     text-decoration: none;
+//     position: relative;
+//     bottom: 80px;
+//   } 
+.b-gallery__box:hover .b-img__name{
+    opacity: 1;
+  }

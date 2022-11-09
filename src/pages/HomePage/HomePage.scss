@@ -1,0 +1,25 @@
+.b-background-home{
+    height: 100vh;
+    width: 100vw;
+    background-image:url(../../shared/assest/background-home.png);
+    position: absolute;
+   
+    
+}
+.b-title{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+    text-align: center;
+    font-family: Thrones;
+    font-size: 176px;
+    color: white;
+    }
+}
+
+.b-header__buscador--none{
+    display: none;
+}
