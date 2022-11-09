@@ -8,8 +8,19 @@ import CharactersPage from './pages/CharactersPage/CharactersPage';
 import CharDetailPage from './pages/CharDetailPage/CharDetailPage';
 import HousesPage from './pages/HousesPage/HousesPage';
 import HouDetailPage from './pages/HouDetailPage/HouDetailPage';
+import TimelinePage from './pages/TimelinePage/TimelinePage';
 
 function App() {
+      const user = {
+        name: "Lelouch Lamperouge",
+        age: 18,
+        anime: "Code Geass",
+        img: "https://somoskudasai.com/wp-content/uploads/2021/12/portada_code-geass-17.jpg",
+        favoriteFoods: ["Pizza", "Pasta", "Lasaña", "Ramen"]
+    }
+
+
+
   return (
     <Router>
     <div >
@@ -23,7 +34,8 @@ function App() {
                   <Route exact path='/Characters' element={<CharactersPage/>}/>
                   <Route exact path='/Characters/:idCharacter' element={<CharDetailPage/>}/>
                   <Route exact path='/Houses' element={<HousesPage/>}/>
-                  <Route exact path='/Houses/:idHouses' element={<HouDetailPage/>}/>
+                  <Route exact path='/Houses/:name' element={<HouDetailPage/>}/>
+                  <Route exact path='/Timeline' element={<TimelinePage/>}/>
                 </Routes>
               </div>        
       
