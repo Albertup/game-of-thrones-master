@@ -8,15 +8,19 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './TimelinePage.scss';
 import { MyContext } from './../../components/MyContext/MyContext'
+import HouseImage01 from "./../../assets/images/jose-hair-smaller.png"
+import HouseImage02 from "./../../assets/images/jose-worm-smaller.png"
+import HouseImage03 from "./../../assets/images/pitel-hodor-smaller.png"
 
 const TimelinePage = () => {
-  const {t} = useContext(MyContext)
   const displeyNone = 'b-header__buscador__div--none';
   const [characters, setcharacters] = useState([]);
   const charactersFilter = [];
   const [ageOrder, setAgeOrder] = useState(true);
   const characterCouple = [];
   const characterOdd = [];
+  const HouseImage = [HouseImage01, HouseImage02, HouseImage03,]
+  const imageRandom = Math.floor(Math.random()*3)
 
   for (let item of characters) {
     if (item.age && item.age.age !== null && item.age.age !== undefined && item.age.age <= 99 ) {
@@ -60,36 +64,44 @@ const TimelinePage = () => {
           <div className="c-timeline--btn">
             <button onClick={() => {
                 ageOrder === true ? setAgeOrder(false) : setAgeOrder(true);
-              }}>{ageOrder === true ? <i className="fa fa-arrow-circle-up" aria-hidden="true"></i> : <i className="fa fa-arrow-circle-down" aria-hidden="true"></i>}
+              }}>{ageOrder === true ? <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> : <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>}
               </button>        
           </div>
           <div className="c-timeline--cardholder">
             <div className="c-timeline--cardholder__couple">
-              {characterCouple.map((item,index) => (
-                <Link key={index} to={`/characters/${item.name}`}>
+              {characterCouple.map((item) => {
+                
+                item.image = item.name === "Mossador"  ?  null: item?.image;
+                item.image = item.name === "Oberyn Martell"  ?  null: item?.image;
+                return (
+                <Link to={`/characters/${item.name}`}>
                   <div className="c-timeline--card__couple">
-                    
-                    <div className="c-timeline--card">
-                    <h3>{item.age.age}</h3>
-                    <h3> {item.name} </h3>
-                      <img src={item.image} alt={item.name} />
-                    </div>
-                  </div>
+                  
+                    <div className="c-timeline--carditem__couple">
+                      <h3>{item.age.age}</h3>
+                      <p> {item.name} </p>
+                      <img src={item?.image  || HouseImage[imageRandom]} alt={item.name} />
+                    </div>                 
+                  </div>   
                 </Link>
-              ))}
+                
+                )})}
             </div>
             <div className="c-timeline--cardholder__odd">
-              {characterOdd.map((item,index) => (
-                <Link key={index} to={`/characters/${item.name}`}>
-                  <div className="c-timeline--card__odd">
-                    <div className="c-timeline--card">
+              {characterOdd.map((item) => {
+                
+                item.image = item.name === "Kinvara"  ?  null: item?.image;
+                return (
+                <Link to={`/characters/${item.name}`}>
+                  <div className="c-timeline--card__odd">                   
+                    <div className="c-timeline--carditem__odd">
                       <h3>{item.age.age}</h3>
-                      <h3> {item.name} </h3>
-                      <img src={item.image} alt={item.name} />
+                      <p> {item.name} </p>
+                      <img src={item?.image  || HouseImage[imageRandom]} alt={item.name} />
                     </div>
                   </div>
                 </Link>
-              ))}
+              )})}
             </div>
           </div>
         </SimpleBar> 

@@ -29,22 +29,23 @@
   }
   .c-houses--holder {
     width: 90vw;
-    height: 70vh;
+    height: 74vh;
   }
   
   .c-houses--card__holder{
-    margin: 20px;
+    margin: 10px;
     
   }
 
   .c-houses--card {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
     width: 210px;
-    height: 300px;
+    height: 220px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:top;
     background-image: url(../../assets/images/house-bg-shield.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -53,20 +54,28 @@
     
   }
   .c-houses--card img {
-    margin-bottom: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 3px;
     max-height: 210px;
     max-width: 150px;
   }
   .c-houses--card__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 210px;
+    height: 300px;
     text-decoration: none;
 
   }
   .c-houses--card p {
+    margin:0px;
     color: rgba(255, 255, 255, 0.8);
     font-family: Thrones;
     text-align: center;
+    line-height: 30px;
     text-decoration: none;
-    font-size: 6px;
+    font-size: 10px;
     max-width: 180px;
   }
