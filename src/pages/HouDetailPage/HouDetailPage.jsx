@@ -43,46 +43,46 @@ const HouDetailPage = () => {
                 <img src={HouseImage[imageRandom]} alt="House"/>
                 <h3>{item.name}</h3>
               <div className='c-house--card--info'>
-                <span >
+                <div className='b-gallery-info__box'>
                   <h3>{t('lema')}</h3>
                   <p>{item.words}</p>
-                </span>
-                <span>
+                </div>
+                <div className='b-gallery-info__box'>
                   <h3>{t('sede')}</h3>
                     <ul>
                       {item.seat.map((seat, index) => (
                       <li key={index}>{seat}</li>
                       ))}
                   </ul>
-                </span>
-                <span>
+                </div>
+                <div className='b-gallery-info__box'>
                   <h3>{t('region')}</h3>
                     <ul>
                       {item.region.map((region, index) => (
                       <li key={index}>{region}</li>
                       ))}
                   </ul>
-                </span>
-                <span>
+                </div>
+                <div className='b-gallery-info__box'>
                   <h3>{t('alianzas')}</h3>
                     <ul>
                       {item.allegiance.map((allegiance, index) => (
                       <li key={index}>{allegiance}</li>
                       ))}
                     </ul>
-                </span>
-                <span>
+                </div>
+                <div className='b-gallery-info__box'>
                   <h3>{t('religion')}</h3>
                   <ul>
                     {item.religion.map((religion, index) => (
                     <li key={index}>{religion}</li>
                     ))}
                   </ul>
-                </span>
-                <span>
+                </div>
+                <div className='b-gallery-info__box'>
                   <h3>{t('fundacion')}</h3>
                   <p>{moment(item.createdAt).calendar()}</p>
-                </span>
+                </div>
               </div>
               
               {/* <button onClick={() => navigate("/Houses")}>Close</button> */}

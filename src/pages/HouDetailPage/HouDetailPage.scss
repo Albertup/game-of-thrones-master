@@ -71,3 +71,24 @@ span{
     flex-direction: column;
     align-items: center;
 }
+.b-gallery-info__box{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 13vw;
+  height: 28vh;
+  li{
+      font-family: 'lato-regular';
+      font-size: 16px;
+      color: white;
+      line-height: 40px;
+  }
+  p{
+      font-family: 'lato-regular';
+      font-size: 16px;
+      color: white;
+      line-height: 40px;
+  }
+}
