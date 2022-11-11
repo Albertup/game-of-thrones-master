@@ -1,6 +1,8 @@
 
 
 import './App.css';
+import { MyContext } from './components/MyContext/MyContext';
+import {useTranslation} from 'react-i18next'
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import CharactersPage from './pages/CharactersPage/CharactersPage';
@@ -11,7 +13,12 @@ import TimelinePage from './pages/TimelinePage/TimelinePage';
 // import Header from './components/Header/Header';
 
 function App() {
+  const {t,i18n} = useTranslation(['translation'])
+  const changeLanguaje = (code) => {
+    i18n.changeLanguage(code)
+  }
   return (
+  <MyContext.Provider value={{t, changeLanguaje}}>  
     <Router>
     <div className='b-size-page'>
       <main>
@@ -29,6 +36,7 @@ function App() {
       </main>
     </div>
     </Router>
+  </MyContext.Provider>  
   );
 }
 

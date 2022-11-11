@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
 import './NavBar.scss'
+import { MyContext } from './../../components/MyContext/MyContext'
 
 const Navbar = () => {
+  const {t} =useContext(MyContext);
   return (
     <div className='b-navBar'>
-        <Link to="/Characters" className='Personajes'>Personajes</Link>              
-        <Link to="/Houses" className='Casas'>Casas</Link>
-        <Link to="/Timeline" className='Cronologia'>Cronologia</Link> 
+        <Link to="/Characters" className='Personajes'>{t('personajes')}</Link>              
+        <Link to="/Houses" className='Casas'>{t('casas')}</Link>
+        <Link to="/Timeline" className='Cronologia'>{t('cronologia')}</Link> 
     </div>
   )
 }

@@ -1,14 +1,16 @@
 
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './TimelinePage.scss';
+import { MyContext } from './../../components/MyContext/MyContext'
 
 const TimelinePage = () => {
+  const {t} = useContext(MyContext)
   const displeyNone = 'b-header__buscador__div--none';
   const [characters, setcharacters] = useState([]);
   const charactersFilter = [];

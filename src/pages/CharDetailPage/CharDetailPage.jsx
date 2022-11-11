@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import Header from '../../components/Header/Header';
@@ -8,10 +8,11 @@ import HouseImage02 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import HouseImage03 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import HouseImage04 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import './CharDetailPage.scss';
+import { MyContext } from './../../components/MyContext/MyContext'
 
 
 const CharDetailPage = () => {
-    
+  const {t} = useContext(MyContext)
     const {idCharacter} = useParams();
     const [character,setCharacter]= useState([])
     const [appearances,setAppearances]= useState([])
@@ -37,7 +38,7 @@ const CharDetailPage = () => {
               const {data} = await axios.get(`https://api.got.show/api/show/houses/${houseName}`);
               setHouseInfo(data);
               }        
-    },)
+    },[])
  
 
   return (
@@ -49,14 +50,14 @@ const CharDetailPage = () => {
             <h1 className='b-CharDetail__name'>{character?.name}</h1>
         <div className='b-gallery-info'>
           <div className='b-gallery-info__box__House'>
-            <h3>CASA</h3>
+            <h3>{t('casa')}</h3>
             {/* <img src={house.logoURL} alt='imagen'/> */}
             {houseInfo.map((home,index)=>{return(
               <img key={index} src={home.logoURL||HouseImage[imageRandom]}className='b-gallery-info__box__imgHouse' alt='imagen'/>
             )})}
           </div>
           <div className='b-gallery-info__box'>
-            <h3>ALIANZAS</h3>
+            <h3>{t('alianzas')}</h3>
             <SimpleBar className='simplebar-content simplebar-content--2 simplebar-scrollbar--2::before'>
               <ul>
                 {allegiances.map((allegiance,index)=>{return(
@@ -65,7 +66,7 @@ const CharDetailPage = () => {
             </SimpleBar> 
           </div>
           <div className='b-gallery-info__box'>
-            <h3>APARICIONES</h3>
+            <h3>{t('apariciones')}</h3>
             <SimpleBar className='simplebar-content simplebar-content--2 simplebar-scrollbar--2::before'>
               <ul>
                 {appearances.map((appearance,index)=>{return(
@@ -74,11 +75,11 @@ const CharDetailPage = () => {
             </SimpleBar> 
           </div>
           <div className='b-gallery-info__box'>
-            <h3>PADRE</h3>
+            <h3>{t('padre')}</h3>
             <p >{character?.father}</p>
           </div>
           <div className='b-gallery-info__box'>
-            <h3>DESCENDIENTES</h3>
+            <h3>{t('descendientes')}</h3>
             <SimpleBar className='simplebar-content simplebar-content--2 simplebar-scrollbar--2::before'> 
               <ul>
                 {siblings.map((sibling,index)=>{return(
@@ -88,7 +89,7 @@ const CharDetailPage = () => {
             </SimpleBar> 
           </div>
           <div className='b-gallery-info__box'>
-            <h3>TÍTULOS</h3>
+            <h3>{t('titulos')}</h3>
             <SimpleBar className='simplebar-content simplebar-content--2 simplebar-scrollbar--2::before'>
               <ul>
                 {titles.map((title,index)=>{return(

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
@@ -10,8 +10,10 @@ import HouseImage03 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import HouseImage04 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { MyContext } from './../../components/MyContext/MyContext'
 
 const HousesPage = () => {
+    const {t} = useContext(MyContext)
     const [houses, setHouses] = useState([]);
     const [ housesFiltered, setHousesFiltered] = useState([]);
     const HouseImage = [HouseImage01, HouseImage02, HouseImage03, HouseImage04]

@@ -1,0 +1,18 @@
+export const en = {
+    volver: "RETURN",
+    cronologia: "CHRONOLOGY",
+    personajes: "CHARACTERS",
+    casas: "HOUSES",
+    input:"SEARCH",
+    lema:'WATCHWORD',
+    sede:'CAMPUS',
+    region:'REGION',
+    alianzas:'ALLIANCES',
+    religion:'RELIGION',
+    fundacion:'FOUNDATION',
+    casa:'HOUSE',
+    apariciones:'APPEARANCES',
+    padre:'FATHER',
+    descendientes:'DECENDENTS',
+    titulos:'TITLES',
+}

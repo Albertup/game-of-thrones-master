@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import SimpleBar from 'simplebar-react';
 import { Link} from 'react-router-dom';
 import './CharactersPage.scss'
@@ -6,9 +6,11 @@ import axios from 'axios';
 import Header from '../../components/Header/Header';
 import 'simplebar-react/dist/simplebar.min.css';
 import Footer from '../../components/Footer/Footer';
+import { MyContext } from './../../components/MyContext/MyContext'
 
 
 const CharactersPage = () => {
+  const {t} = useContext(MyContext)
   const [characters,setCharacters] = useState([]);
 
   const [ charactersFiltered, setCharactersFiltered] = useState([]);

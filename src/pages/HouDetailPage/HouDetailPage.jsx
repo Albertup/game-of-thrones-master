@@ -1,6 +1,6 @@
 import axios from 'axios';
 import moment from 'moment/moment';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import './HouDetailPage.scss';
 import HouseImage01 from "./../../assets/images/House-Unknown-Main-Shield.png"
@@ -8,12 +8,14 @@ import HouseImage02 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import HouseImage03 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import HouseImage04 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import Header from '../../components/Header/Header';
+import { MyContext } from './../../components/MyContext/MyContext'
 // import Footer from '../../components/Footer/Footer';
 
 const HouDetailPage = () => {
+    const {t} = useContext(MyContext)
     const {name} = useParams();
     // const location = useLocation();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     // console.log(name);
     // console.log(location);
     const [house, setHouse] = useState([]);
@@ -27,7 +29,7 @@ const HouDetailPage = () => {
             // console.log(res.data);
             setHouse(res.data)
         }getDetail()
-    },)
+    },[])
       if (!house) return null;
   return (
     <>
@@ -42,11 +44,11 @@ const HouDetailPage = () => {
                 <h3>{item.name}</h3>
               <div className='c-house--card--info'>
                 <span >
-                  <h3>Lema</h3>
+                  <h3>{t('lema')}</h3>
                   <p>{item.words}</p>
                 </span>
                 <span>
-                  <h3>Sede</h3>
+                  <h3>{t('sede')}</h3>
                     <ul>
                       {item.seat.map((seat, index) => (
                       <li key={index}>{seat}</li>
@@ -54,7 +56,7 @@ const HouDetailPage = () => {
                   </ul>
                 </span>
                 <span>
-                  <h3>Región</h3>
+                  <h3>{t('region')}</h3>
                     <ul>
                       {item.region.map((region, index) => (
                       <li key={index}>{region}</li>
@@ -62,7 +64,7 @@ const HouDetailPage = () => {
                   </ul>
                 </span>
                 <span>
-                  <h3>Alianzas</h3>
+                  <h3>{t('alianzas')}</h3>
                     <ul>
                       {item.allegiance.map((allegiance, index) => (
                       <li key={index}>{allegiance}</li>
@@ -70,7 +72,7 @@ const HouDetailPage = () => {
                     </ul>
                 </span>
                 <span>
-                  <h3>Religión</h3>
+                  <h3>{t('religion')}</h3>
                   <ul>
                     {item.religion.map((religion, index) => (
                     <li key={index}>{religion}</li>
@@ -78,12 +80,12 @@ const HouDetailPage = () => {
                   </ul>
                 </span>
                 <span>
-                  <h3>Fundación</h3>
+                  <h3>{t('fundacion')}</h3>
                   <p>{moment(item.createdAt).calendar()}</p>
                 </span>
               </div>
               
-              <button onClick={() => navigate("/Houses")}>Close</button>
+              {/* <button onClick={() => navigate("/Houses")}>Close</button> */}
             </div>
           </div>
       </div>                     

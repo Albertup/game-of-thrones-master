@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import './HomePage.scss'
+import { MyContext } from './../../components/MyContext/MyContext'
 
 const HomePage = () => {
+  const {t} = useContext(MyContext)
   return (
   <div className='b-background-home'>
     <Header className='b-header__buscador b-header__buscador--none'
