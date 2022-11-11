@@ -1,23 +1,19 @@
 
 
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import CharactersPage from './pages/CharactersPage/CharactersPage';
 import CharDetailPage from './pages/CharDetailPage/CharDetailPage';
 import HousesPage from './pages/HousesPage/HousesPage';
 import HouDetailPage from './pages/HouDetailPage/HouDetailPage';
+import TimelinePage from './pages/TimelinePage/TimelinePage';
 // import Header from './components/Header/Header';
 
 function App() {
   return (
     <Router>
     <div className='b-size-page'>
-      {/* <Header ></Header> */}
-      <header >
-        
-      </header>
       <main>
               <div>
                 <Routes>
@@ -25,14 +21,12 @@ function App() {
                   <Route exact path='/Characters' element={<CharactersPage/>}/>
                   <Route exact path="/Characters/:idCharacter" element={<CharDetailPage/>}/>
                   <Route exact path='/Houses' element={<HousesPage/>}/>
-                  <Route exact path='/Houses/:idHouses' element={<HouDetailPage/>}/>
+                  <Route exact path='/Houses/:name' element={<HouDetailPage/>}/>
+                  <Route exact path='/Timeline' element={<TimelinePage/>}/>
                 </Routes>
               </div>        
       
       </main>
-      <footer>
-        <Navbar/>
-      </footer>
     </div>
     </Router>
   );

@@ -1,20 +1,26 @@
 import React from 'react'
-import Img from '../../shared/assest/lupa-blanca.png'
-import Home from '../../shared/assest/home.svg'
-import Español from '../../shared/assest/español.svg'
-import Ingles from '../../shared/assest/ingles.svg'
+import Img from '../../assets/images/lupa-blanca.png'
+import Home from '../../assets/images/home.svg'
+import Español from '../../assets/images/español.svg'
+import Ingles from '../../assets/images/ingles.svg'
 
 import './Header.scss'
 import { Link } from 'react-router-dom'
 
-const Header = ({search}) => {
+const Header = ({search,searchHouses,className,className1,className2,className3,myHouses}) => {
   const handleChange = (event) => {
     const {value}= event.target;
-    search(value);
+    // eslint-disable-next-line no-lone-blocks
+    {!myHouses ? search(value): searchHouses(value)}
+    ;
+    
 }
   return (
-  <header className='b-header'>
-    <div className='b-header__buscador'>
+ 
+  <header className={className3}>
+    <div className={className1}><Link className='linksReturn' to="/Characters">Volver</Link>   </div>
+    <div className={className2}><Link className='linksReturn' to="/Houses" >Volver</Link></div>
+    <div className={className}>
       <div className='b-header__buscador__div'>
         <img className='b-header__buscador__div__img' src={Img} alt='buscador'></img>
       </div>

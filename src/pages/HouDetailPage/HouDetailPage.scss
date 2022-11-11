@@ -1,0 +1,73 @@
+.b-background{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(18, 19, 22, 1);
+    position: absolute;
+}
+.c-house--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    width: 100vw;
+    height: 80vh;
+    background-color: rgba(18, 19, 22, 1);
+  }
+  
+  .c-house--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  .c-house--card--info {
+    display: flex;
+    flex-direction: row;
+  }
+  .c-house--card img {
+    margin-bottom: 20px;
+    max-height: 270px;
+    max-width: 210px;
+  }
+  .c-house--card span {
+    margin-left: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'lato-regular';
+    text-transform: capitalize;
+
+  }
+  .c-house--card h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Thrones;
+  }
+  .c-house--card p {
+    display: flex;
+    max-width: 200px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'lato-regular';
+    line-height: 40px;
+  }
+  ul{
+    list-style: none;
+}
+  li{
+    font-family: 'lato-regular';
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+}
+span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

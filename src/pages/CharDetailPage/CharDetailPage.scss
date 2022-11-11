@@ -1,21 +1,21 @@
 .b-background{
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: rgba(18, 19, 22, 1);
     position: absolute;
   }
 .b-CharDetail{
     width: 100vw;
     height: 70vh;
-    background-color:black;
+    background-color:rgba(18, 19, 22, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 .b-CharDetail__img{
-    width: 248px;
-    height: 320px;
+    width: 20vw;
+    height: 33vh;
     object-fit: contain;
     padding: 5px;
   }
@@ -25,8 +25,8 @@
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    width: 642px;
-    height: 36px;
+    width: 33vw;
+    height: 3.5vh;
     
     font-family: Thrones;
     font-size: 36px;
@@ -55,8 +55,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 248px;
-    height: 300px;
+    width: 13vw;
+    height: 28vh;
     li{
         font-family: 'lato-regular';
         font-size: 16px;
@@ -71,22 +71,22 @@
     }
 }
 .b-gallery-info__box__House{
-    width: 248px;
-    height: 300px;
+    width: 13vw;
+    height: 28vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 .b-gallery-info__box__imgHouse{
-    width: 200px;
-    height: 300px;
+    width: 10.5vw;
+    height: 28vh;
 }
 
   
 .simplebar-content--2{ 
-    width: 248px;
-    height: 231px;
+    width: 13vw;
+    height: 21.4vh;
 } 
 .simplebar-scrollbar--2::before { 
     color: white;

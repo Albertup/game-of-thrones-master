@@ -3,11 +3,15 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import Header from '../../components/Header/Header';
-
+import HouseImage01 from "./../../assets/images/House-Unknown-Main-Shield.png"
+import HouseImage02 from "./../../assets/images/House-Unknown-Main-Shield.png"
+import HouseImage03 from "./../../assets/images/House-Unknown-Main-Shield.png"
+import HouseImage04 from "./../../assets/images/House-Unknown-Main-Shield.png"
 import './CharDetailPage.scss';
 
 
 const CharDetailPage = () => {
+    
     const {idCharacter} = useParams();
     const [character,setCharacter]= useState([])
     const [appearances,setAppearances]= useState([])
@@ -15,6 +19,8 @@ const CharDetailPage = () => {
     const [siblings,setSiblings]= useState([])
     const [titles,setTitles]= useState([])
     // const [houseName,setHouseName]= useState([])
+    const HouseImage = [HouseImage01, HouseImage02, HouseImage03, HouseImage04]
+    const imageRandom = Math.floor(Math.random()*4)
     const [houseInfo,setHouseInfo]= useState([])
     useEffect(()=>{
         async function getData() {
@@ -31,12 +37,13 @@ const CharDetailPage = () => {
               const {data} = await axios.get(`https://api.got.show/api/show/houses/${houseName}`);
               setHouseInfo(data);
               }        
-    },[])
+    },)
  
 
   return (
   <div className='b-background'> 
-    <Header></Header>
+    <Header className='b-header__buscador b-header__buscador--none'
+          className1='b-charactersReturn' className2='b-houseReturn--none' className3='b-header'></Header>
     <div className='b-CharDetail'>
             <img  className='b-CharDetail__img' src={character?.image} alt='imagen'/>
             <h1 className='b-CharDetail__name'>{character?.name}</h1>
@@ -45,7 +52,7 @@ const CharDetailPage = () => {
             <h3>CASA</h3>
             {/* <img src={house.logoURL} alt='imagen'/> */}
             {houseInfo.map((home,index)=>{return(
-              <img key={index} src={home.logoURL} class='b-gallery-info__box__imgHouse' alt='imagen'/>
+              <img key={index} src={home.logoURL||HouseImage[imageRandom]}className='b-gallery-info__box__imgHouse' alt='imagen'/>
             )})}
           </div>
           <div className='b-gallery-info__box'>

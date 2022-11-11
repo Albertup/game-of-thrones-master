@@ -1,14 +1,19 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import './HomePage.scss'
 
 const HomePage = () => {
   return (
   <div className='b-background-home'>
-    <Header></Header>
+    <Header className='b-header__buscador b-header__buscador--none'
+          className1='b-charactersReturn--none' className2='b-houseReturn--none' className3='b-header--sec'></Header>
+    <div className='b-title-container'>
       <div className='b-title'>
         <h1>GAMES OF THRONES</h1>
       </div>
+    </div>
+    <Footer></Footer>
   </div>  
     
   )

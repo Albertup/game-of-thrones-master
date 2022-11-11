@@ -1,21 +1,29 @@
 .b-background-home{
     height: 100vh;
     width: 100vw;
-    background-image:url(../../shared/assest/background-home.png);
+    background-image:url(../../assets/images/background-home.png);
     position: absolute;
+    background-size: contain;
    
     
 }
-.b-title{
+.b-title-container{
     width: 100vw;
     height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-title{
+    width: 71vw;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
     h1{
     text-align: center;
     font-family: Thrones;
-    font-size: 176px;
+    font-size: 106px;
     color: white;
     }
 }

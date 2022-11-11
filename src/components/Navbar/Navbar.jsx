@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='b-navBar'>
         <Link to="/Characters" className='Personajes'>Personajes</Link>              
         <Link to="/Houses" className='Casas'>Casas</Link>
-        <Link to="/" className='Cronologia'>Cronologia</Link> 
+        <Link to="/Timeline" className='Cronologia'>Cronologia</Link> 
     </div>
   )
 }

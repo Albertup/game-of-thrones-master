@@ -1,0 +1,72 @@
+.b-background{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(18, 19, 22, 1);
+    position: absolute;
+}
+.c-houses--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(18, 19, 22, 1);
+}
+
+.simplebar-content {
+    width: 85vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.simplebar-scrollbar::before {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100px;
+    width: 4px;
+  }
+  .c-houses--holder {
+    width: 90vw;
+    height: 70vh;
+  }
+  
+  .c-houses--card__holder{
+    margin: 20px;
+    
+  }
+
+  .c-houses--card {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 210px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../assets/images/house-bg-shield.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    
+    
+  }
+  .c-houses--card img {
+    margin-bottom: 32px;
+    margin-left: 3px;
+    max-height: 210px;
+    max-width: 150px;
+  }
+  .c-houses--card__link{
+    text-decoration: none;
+
+  }
+  .c-houses--card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Thrones;
+    text-align: center;
+    text-decoration: none;
+    font-size: 6px;
+    max-width: 180px;
+  }
