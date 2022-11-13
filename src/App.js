@@ -1,8 +1,8 @@
-
-
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import {useTranslation} from 'react-i18next'
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { MyContext } from './components/MyContext/MyContext';
+
 import HomePage from './pages/HomePage/HomePage';
 import CharactersPage from './pages/CharactersPage/CharactersPage';
 import CharDetailPage from './pages/CharDetailPage/CharDetailPage';
@@ -11,22 +11,17 @@ import HouDetailPage from './pages/HouDetailPage/HouDetailPage';
 import TimelinePage from './pages/TimelinePage/TimelinePage';
 
 function App() {
-      const user = {
-        name: "Lelouch Lamperouge",
-        age: 18,
-        anime: "Code Geass",
-        img: "https://somoskudasai.com/wp-content/uploads/2021/12/portada_code-geass-17.jpg",
-        favoriteFoods: ["Pizza", "Pasta", "Lasaña", "Ramen"]
-    }
+  const {t,i18n} = useTranslation(['translation'])
+  const changeLanguaje = (code) => {
+    i18n.changeLanguage(code)
+  }
 
 
 
   return (
+    <MyContext.Provider value={{t, changeLanguaje}}> 
     <Router>
     <div >
-      <header>
-        
-      </header>
       <main>
               <div>
                 <Routes>
@@ -40,11 +35,9 @@ function App() {
               </div>        
       
       </main>
-      <footer>
-        <Navbar/>
-      </footer>
     </div>
     </Router>
+    </MyContext.Provider>  
   );
 }
 

@@ -1,0 +1,80 @@
+    .c-character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 80vh;
+    background-color:rgba(18, 19, 22, 1);
+    }      
+    .c-characters--holder{
+    width: 90vw;
+    height: 80vh;
+    }
+    .simplebar-content { 
+      width: 90vw;
+      height: 80vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; 
+      margin-bottom: 100px;
+    } 
+    .simplebar-scrollbar::before {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100px;
+    width: 4px;
+    }
+    .simplebar-placeholder{
+      width: 90vw;
+      height: 80vh;
+    }
+    
+  .c-character--gallery{
+      display: flex; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+    }
+    .c-character--gallery__box{
+    margin: 30px 10px;
+    width: 210px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    }
+    .c-img{
+    object-fit:cover;
+    max-width: 210px;
+    height: 100%;
+    width: 100%;
+    
+        
+    }
+    .c-img__name{
+    width: 210px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    background-color: #4c4c4c86;
+    transition: 1.5s ease;
+    & p {
+    font-family: Thrones;
+    letter-spacing: 0.15rem;
+    font-size: 14px;
+    font-weight: 300;
+    }
+    }  
+    
+    .c-character--gallery__box:hover .c-img__name{
+      opacity: 1;
+    }
+  
