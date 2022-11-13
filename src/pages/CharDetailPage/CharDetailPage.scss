@@ -34,8 +34,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: center; 
 }
 .c-gallery-info__box{
     overflow: hidden;
@@ -43,8 +42,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-width: 200px;
+    max-width: 300px;
     max-height: 300px;
+    overflow: hidden;
+    ul {
+        max-width: 200px;
+        max-height: 300px;
+    }
     h3 {
         font-family: Thrones;
         letter-spacing: 0.15rem;
@@ -86,16 +90,5 @@
     }
 }
 
-.simplebar-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-.simplebar-scrollbar::before {
-    background: rgba(255, 255, 255, 0.8);
-    height: 100px;
-    width: 4px;
-  }
 
