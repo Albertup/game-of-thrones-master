@@ -1,0 +1,102 @@
+  .c-house--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    background-color: rgba(18, 19, 22, 1);
+  }
+  .c-house--card--info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90vw;
+  }
+  .c-house--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center; 
+    & span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 160px;
+      margin-bottom: 20px;     
+    }
+    & h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: Thrones;
+      letter-spacing: 0.15rem;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 3vh;
+      padding: 10px;      
+    }
+    & h3 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: Thrones;
+      letter-spacing: 0.15rem;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 3vh;
+    }
+    & p {
+      display: flex;
+      max-width: 200px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 3vh;
+    }
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    & li {
+      display: flex;
+      max-width: 200px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  .c-house--card__image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 300px;
+    margin: 3vh 0;
+    padding: 20px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./../../assets/images/house-bg-shield.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    & img {
+      max-height: 210px;
+      max-width: 150px;
+      margin-top: 6px;
+      margin-left: 4px;
+    }     
+  }
+
+  
+ 

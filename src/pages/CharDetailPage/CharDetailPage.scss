@@ -1,0 +1,95 @@
+
+.c-CharDetail {
+    width: 100vw;
+    height: 70vh;
+    background-color:rgba(18, 19, 22, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.c-CharMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img {
+    max-width: 210px;
+    max-height: 300px;
+    overflow: hidden;
+    padding: 5px;
+    margin: 1vh 0;
+    }
+    & h1 {
+    text-align: center;
+    font-family: Thrones;
+    letter-spacing: 0.2rem;
+    font-size: 32px;
+    font-weight: 400;
+    color:white;
+    margin-bottom: 1vh;
+    }
+}
+
+
+.c-gallery-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.c-gallery-info__box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 180px;
+    max-width: 250px;
+    max-height: 300px;
+    overflow: hidden;
+    ul {
+        max-width: 200px;
+        max-height: 300px;
+    }
+    h3 {
+        font-family: Thrones;
+        letter-spacing: 0.15rem;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    li{
+        font-size: 16px;
+        font-weight: 300;
+        color: white;
+        line-height: 30px;
+        max-width: 180px;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 300;
+        color: white;
+        line-height: 40px;
+    }
+}
+
+.c-gallery-info__shield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./../../assets/images/house-bg-shield.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    & img {
+    width: 155px;
+    margin-left: 3px;
+    margin-top: 8px;
+    }
+}
+
+
+

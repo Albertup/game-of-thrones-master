@@ -1,0 +1,93 @@
+
+
+.b-background-home{
+    height: 100vh;
+    width: 100vw;
+    background-image:url(../../assets/images/background-home.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+.b-title-container{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-title{
+    width: 51vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+    text-align: center;
+    font-family: Thrones;
+    font-size: 106px;
+    font-weight: 400;
+    color: white;
+    }
+}
+
+.b-header__buscador--none{
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.b-background-home {
+		background-size: 300%;
+	}
+    .b-title h1{
+        font-size: 42px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.b-background-home{
+        background-size: 300%; 
+    }
+    .b-title h1{
+        font-size: 56px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.b-background-home{
+        background-size: 250%; 
+    }
+    .b-title h1{
+        font-size: 70px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.b-background-home{
+        background-size: 200%; 
+    }
+    .b-title h1{
+        font-size: 84px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.b-background-home{
+        background-size: 150%; 
+    }
+    .b-title h1{
+        font-size: 98px;
+    }
+}
+/* Super Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+	.b-background-home{
+        background-size: 100%; 
+    }
+    .b-title h1{
+        font-size: 112px;
+    }
+}

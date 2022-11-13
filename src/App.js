@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import {useTranslation} from 'react-i18next'
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { MyContext } from './components/MyContext/MyContext';
+
+import HomePage from './pages/HomePage/HomePage';
+import CharactersPage from './pages/CharactersPage/CharactersPage';
+import CharDetailPage from './pages/CharDetailPage/CharDetailPage';
+import HousesPage from './pages/HousesPage/HousesPage';
+import HouDetailPage from './pages/HouDetailPage/HouDetailPage';
+import TimelinePage from './pages/TimelinePage/TimelinePage';
 
 function App() {
+  const {t,i18n} = useTranslation(['translation'])
+  const changeLanguaje = (code) => {
+    i18n.changeLanguage(code)
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <MyContext.Provider value={{t, changeLanguaje}}> 
+    <Router>
+    <div >
+      <main>
+              <div>
+                <Routes>
+                  <Route path='/' element={<HomePage/>}/>
+                  <Route exact path='/Characters' element={<CharactersPage/>}/>
+                  <Route exact path='/Characters/:idCharacter' element={<CharDetailPage/>}/>
+                  <Route exact path='/Houses' element={<HousesPage/>}/>
+                  <Route exact path='/Houses/:name' element={<HouDetailPage/>}/>
+                  <Route exact path='/Timeline' element={<TimelinePage/>}/>
+                </Routes>
+              </div>        
+      
+      </main>
     </div>
+    </Router>
+    </MyContext.Provider>  
   );
 }
 
