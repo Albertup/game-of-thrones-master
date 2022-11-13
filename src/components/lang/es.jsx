@@ -1,0 +1,18 @@
+export const es = {
+    volver: "Volver",
+    cronologia: "CRONOLOGIA",
+    personajes: "PERSONAJES",
+    casas: "CASAS",
+    input:"Buscar...",
+    lema:'LEMA',
+    sede:'SEDE',
+    region:'REGION',
+    alianzas:'ALIANZAS',
+    religion:'RELIGION',
+    fundacion:'FUNDACION',
+    casa:'CASA',
+    apariciones:'APARICIONES',
+    padre:'PADRE',
+    descendientes:'DESCENDIENTES',
+    titulos:'TITULOS',
+}

@@ -1,26 +1,16 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import { NavLink } from "react-router-dom";
+import './Navbar.scss'
+import { MyContext } from './../../components/MyContext/MyContext'
 
 const Navbar = () => {
+  const {t} =useContext(MyContext);
   return (
-            <div>
-              <div>
-                <ul>
-                  <li>
-                  <Link to="/"><button>Home</button></Link>
-                  </li>
-                  <li>
-                  <Link to="/Characters"><button>Characters</button></Link>
-                  </li>
-                  <li>
-                  <Link to="/Houses"><button>Houses</button></Link>
-                  </li>
-                  <li>
-                  <Link to="/Timeline"><button>Timeline</button></Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div className='c-navbar'>
+        <NavLink to="/Characters" className='c-navbar__link' >{t('personajes')}</NavLink>              
+        <NavLink to="/Houses" className='c-navbar__link' >{t('casas')}</NavLink>
+        <NavLink to="/Timeline" className='c-navbar__link' >{t('cronologia')}</NavLink> 
+    </div>
   )
 }
 

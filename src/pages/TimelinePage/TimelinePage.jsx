@@ -1,16 +1,21 @@
 
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
+import { MyContext } from './../../components/MyContext/MyContext'
 import 'simplebar-react/dist/simplebar.min.css';
 import './TimelinePage.scss';
 
 import HouseImage01 from "./../../assets/images/jose-hair-smaller.png"
 import HouseImage02 from "./../../assets/images/jose-worm-smaller.png"
 import HouseImage03 from "./../../assets/images/pitel-hodor-smaller.png"
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 
 const TimelinePage = () => {
+  const {t} = useContext(MyContext)
+  const displayNone = 'b-header__buscador__div--none';
   const [characters, setcharacters] = useState([]);
   const charactersFilter = [];
   const [ageOrder, setAgeOrder] = useState(true);
@@ -59,7 +64,8 @@ const TimelinePage = () => {
   return (
       
     <>
-      
+      <Header classNone={displayNone} className='b-header__buscador b-header__buscador--none'
+          className1='b-charactersReturn--none' className2='b-houseReturn--none' className3='b-header--sec'></Header>
       <div className='c-timeline--container'>
         <SimpleBar  className='c-timeline--holder'> 
           <div className="c-timeline--btn">
@@ -107,6 +113,7 @@ const TimelinePage = () => {
           </div>
         </SimpleBar> 
       </div>
+      <Footer/>
     </>
 
   )
