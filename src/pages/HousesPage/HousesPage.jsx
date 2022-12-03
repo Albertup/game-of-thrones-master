@@ -50,6 +50,11 @@ const HousesPage = () => {
           <SimpleBar  className='c-houses--holder'>          
                 {housesFiltered.map((item, index) => {
                   imageRandom = Math.floor(Math.random()*9)
+                  item.logoURL = item.name === "House Dayne"  ?  null: item?.logoURL;
+                  item.logoURL = item.name === "House Crakehall"  ?  null: item?.logoURL;
+                  item.logoURL = item.name === "House Blacktyde"  ?  null: item?.logoURL;
+                  item.logoURL = item.name === "House Baratheon of King's Landing"  ?  null: item?.logoURL;
+                  item.logoURL = item.name === "House Baelish"  ?  null: item?.logoURL;
                   item.logoURL = item.name === "House Amber"  ?  null: item?.logoURL;
                   item.logoURL = item.name === "House Baratheon"  ?  null: item?.logoURL;
                   item.logoURL = item.name === "House Blackfyre"  ?  null: item?.logoURL;
